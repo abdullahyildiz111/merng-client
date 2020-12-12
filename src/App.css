@@ -1,0 +1,24 @@
+.page-title {
+    display: block !important;
+    text-align: center;
+    font-size: 10rem;
+    margin-top: 10px;
+}
+
+.form-container{
+    width: 40%;
+    margin: auto;
+}
+
+.genislik{
+    width: 95%;
+    margin: auto;
+}
+
+.genislik-yorum{
+    width: 80%;
+    margin: auto;
+    margin-left: 20%;
+    display: block !important;
+    
+}
