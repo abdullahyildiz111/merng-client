@@ -10,7 +10,7 @@ import MyPopup from '../util/MyPopup';
 
 
 function PostCard({
-  post: { body, createdAt, id, username, likeCount, commentCount, likes } }) {
+  post: { body, createdAt, id, gender, username, likeCount, commentCount, likes } }) {
 
   const { user } = useContext(AuthContext);
 
@@ -20,11 +20,15 @@ function PostCard({
 
     <Card fluid >
       <Card.Content>
-        <Image
+      {gender && (gender === 'male' ? (<Image
           floated='right'
           size='mini'
-          src='https://react.semantic-ui.com/images/avatar/large/molly.png'
-        />
+          src='https://semantic-ui.com/images/avatar2/large/matthew.png'
+        /> ): (<Image
+        floated='right'
+        size='mini'
+        src='https://semantic-ui.com/images/avatar2/large/molly.png'
+      /> ))}
         <Card.Header>{username}</Card.Header>
         <Card.Meta as={Link} to={`/posts/${id}`}>{moment(createdAt).fromNow(true)}</Card.Meta>
         <Card.Description>
